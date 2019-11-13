@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Now UI Dashboard Angular](https://creativetimofficial.github.io/now-ui-dashboard-angular) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
 ![alt text](https://s3.amazonaws.com/creativetim_bucket/products/85/original/opt_nud_angular_thumbnail.jpg)
@@ -162,3 +163,7 @@ Instagram: <https://instagram.com/creativetimofficial>
 [LICENSE]: ./LICENSE
 [version-badge]: https://img.shields.io/badge/version-1.1.0-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+=======
+# MaorMusicProject
+Dashboard for music managment buissiness
+>>>>>>> ccaba2e0f5139f5d1db94397489e9d308922c350
