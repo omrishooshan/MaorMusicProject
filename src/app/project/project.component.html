@@ -1,16 +1,43 @@
 <div class="panel-header panel-header-sm">
-</div>
-<div class="btn-group dropright">
-  <button type="button" class="btn btn-primary">Dropright test git </button>
-  <button type="button" class="btn btn-primary dropdown-toggle px-3" data-toggle="dropdown" aria-haspopup="true"
-    aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
   </div>
-</div>
+  <div class="main-content">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0">
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+          <div class="card" style="width: 100%;background-color: #ebecf0; text-align: center;">
+              <div class="card-header">
+                  <h4 class="card-title" >{{ProjectId}} {{ProjectName}}</h4>
+                </div>
+              
+                <div class="card-body" >
+                    <!--//looping through all the phases of this specific project-->
+                    <div *ngFor="let item of phaseArry ; let i = index">
+                    <!--<span style="color:coral; font-size: 1.2em;">Phase {{i+1}}</span>-->
+     <app-phases [phasename]="item" [phaseindex]="i"></app-phases>
+     </div>
+       <!--//looping through all the phases of this specific project ends here-->
+         <!--option to add a new phase (opens a textarea with click event)-->
+    <span (click)="show=true" class="spans_for_adding_data" > <i class="now-ui-icons ui-1_simple-add"></i>Add New Phase</span>
+    <div *ngIf="show">
+    <hr>
+  <input for="PhaseInputRef" type="textarea"  placeholder="enter here a new phase..." style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 64px;" #PhaseInputRef>
+  <div>
+  <button class="btn btn-success" (click)="show=false" (click)="addPhase()">Save</button>
+  <span style="margin: 24px;">
+  </span>
+  <i class="now-ui-icons ui-1_simple-remove" (click)="show=false" style="cursor: pointer;"></i>
+  </div>
+    </div>
+    <!--option to add a new phase (opens a textarea with click event) closes here-->
+      </div>
+  
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  
+    
+  

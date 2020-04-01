@@ -5,35 +5,46 @@
     <div class="col-md-8">
       <div class="card">
         <div class="card-header">
-          <h5 class="title">Add A New Artist For Your List</h5>
+          <h5 class="title">Add A New Musician For Your List</h5>
         </div>
         <div class="card-body">
           <form>
             <div class="row">
               <div class="col-md-5 pr-1">
                 <div class="form-group">
-                  <label>Full Artist Name</label>
-                  <input type="text" class="form-control" placeholder="Company" value="Creative Code Inc.">
+                  <label for="nameInputRef">full Name</label>
+                  <input type="text" class="form-control" placeholder="enter full name.." #nameInputRef>
                 </div>
               </div>
               <div class="col-md-3 px-1">
                 <div class="form-group">
-                  <label>Artist Instrument played</label>
-                  <input type="text" class="form-control" placeholder="Username" value="michael23">
+                  <label for="instrumentInputRef">Musician Instrument played</label>
+                  <input type="text" class="form-control" placeholder="enter instrument.." #instrumentInputRef>
                 </div>
               </div>
               <div class="col-md-4 pl-1">
                 <div class="form-group">
-                  <label for="email">Phone Number</label>
-                  <input name="phone" id="phone" type="phone" class="form-control" placeholder="phone">
+                  <label for="CellphoneInputRef">Phone Number</label>
+                  <input type="text" class="form-control" placeholder="phone number..." #CellphoneInputRef>
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <div class="form-group">
+                  <label for="EmailInputRef">Email</label>
+                  <input type="text" class="form-control" placeholder="Email..." #EmailInputRef>
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <div class="form-group">
+                  <label for="PriceInputRef">Price per session</label>
+                  <input type="text" class="form-control" placeholder="price per session..." #PriceInputRef>
                 </div>
               </div>
             </div>
-
            <div class="row">
               <div class="col-md-3 pr-2 text-center">
   
-                  <button _ngcontent-c6="" class="btn btn-primary btn-block">Submit</button>
+                  <button _ngcontent-c6="" class="btn btn-primary btn-block" (click)="pushMusician()" >Submit</button>
 
               </div>
                 </div>

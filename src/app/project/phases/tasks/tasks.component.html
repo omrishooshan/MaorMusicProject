@@ -1,0 +1,37 @@
+<ngb-accordion #acc="ngbAccordion"  >
+
+  <ngb-panel title="Task {{taskIndex+1}} - {{tasksname}}" aria-valuetext="ffff">
+    <ng-template ngbPanelContent>
+
+
+<ul>
+  <li><app-sessions [sessionName]="item" *ngFor="let item of sessionsArry ; let i = index"></app-sessions></li>
+
+
+</ul>
+ <app-create-session></app-create-session>
+                  <!--option to add a new phase (opens a textarea with click event)
+                  <span (click)="show=true" class="spans_for_adding_data" > <i class="now-ui-icons ui-1_simple-add"></i>Add New Session </span>
+                  <div *ngIf="show">
+                  <hr>
+ 
+           <input for='SessionInputRef' type="textarea"  placeholder="enter here a new session..." style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 64px;" #SessionInputRef>
+           <hr>
+           <app-date-picker></app-date-picker>
+           <hr>
+           <app-time-picker></app-time-picker>
+
+            <div>
+            <button class="btn btn-success" (click)="show=false; addSession();">Save</button>
+            <span style="margin: 24px;">
+            </span>
+            <i class="now-ui-icons ui-1_simple-remove" (click)="show=false" style="cursor: pointer;"></i>
+            </div>
+                  </div>
+                  option to add a new phase (opens a textarea with click event) closes here-->
+    </ng-template>
+
+  </ngb-panel>
+
+</ngb-accordion>
+

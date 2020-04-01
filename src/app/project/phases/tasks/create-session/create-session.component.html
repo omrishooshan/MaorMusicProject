@@ -1,0 +1,54 @@
+
+<p (click)="open(content)" >Add A New Session</p>
+
+<!---this template opens when pressing on session to see session info-->
+<ng-template #content let-c="close" let-d="dismiss">
+    
+        <div class="modal-header">
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+      
+    <form > 
+        <div class="col-md-9 ">
+            <div class="form-group">
+            <label>Session Name</label>
+            <input name="sessionNameName" id="firstName"  type="textarea" class="form-control" placeholder="first name.." #firstNameInputRef>
+            </div>
+          </div>
+          <div class="col-md-3 ">
+              <div class="form-group">
+              <label>Date</label>
+            <app-date-picker></app-date-picker>
+        </div>
+
+      </div>
+        <div class="col-md-5 ">
+            <div class="form-group">
+                <label >Hour</label>
+              <app-time-picker></app-time-picker>
+        </div> 
+      </div>
+      <div class="col-md-12 ">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input name="description" id="description" type="text" class="form-control" placeholder="description.." #DescriptionInputRef>
+          </div>
+           </div>
+        </form>
+
+        </div>
+   <div class="modal-footer">
+
+       <div class="col-md-4">
+      <app-check-box-model></app-check-box-model>
+      </div>
+      <div class="col-md-4">
+     <button  _ngcontent-c6="" class="btn btn-success btn-right btn-block "  (click)="c('Save click')">Save</button>
+   </div>
+   </div>
+
+ </ng-template>
+ <!--session template ends here   style=" margin-left: 35%; margin-right: 37%;"-->

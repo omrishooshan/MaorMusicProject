@@ -1,0 +1,51 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Add A New Project For Your List</h5>
+
+        </div>
+        <div class="card-body">
+          <form >
+            <div class="row">
+          
+              <div class="col-md-3 px-1">
+                <div class="form-group">
+                  <label for="projectName">Projects Name</label>
+                  <input name="projectName" id="projectName" type="text" class="form-control" placeholder="project name (song)" #projectNameInputRef>
+                </div> 
+              </div>
+              
+              <div class="col-md-4 pl-1">
+               
+                <div class="form-group">
+                   
+                  <label for="description">Description</label>
+                  <input name="description" id="description" type="text" class="form-control" placeholder="description.." #DescriptionInputRef>
+                </div>
+              </div>
+         
+          
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="Price">estimated price</label>
+                <input name="price" type="text" class="form-control" placeholder="estimated price..." #PriceInputRef>
+              </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+            <app-checkbox-client  (IdGenerated)="onIdGenerated($event)"></app-checkbox-client>
+            </div>
+            </div>
+      
+              <div class="col-md-3 pr-2 text-center">
+                  <button _ngcontent-c6="" class="btn btn-primary btn-block" (click)="pushProject()">Submit</button>
+                </div>
+                </div>
+              </form>
+ 

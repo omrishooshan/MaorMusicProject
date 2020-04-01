@@ -1,0 +1,40 @@
+<table class="table">
+  <thead class=" text-primary">
+    <th scop="col">
+    First Name
+    </th>
+    <th scop="col">
+     Last Name 
+    </th>
+    <th scop="col">
+      Instument
+    </th>
+    <th class="text-right" scop="col">
+      Phone number
+    </th>
+  </thead>
+  <tbody>
+    <!--public id,public musicanFirstName,public musicianLastName, public instrument-->
+    <tr *ngFor="let value of arrayMusicianTest | paginate: {id: 'pagination2', itemsPerPage: 5, currentPage: p }" >
+      <td scop="row">
+        {{value.name}}
+      </td>
+      <td scop="row">
+          {{value.email}}
+      </td>
+      <!--  public name,
+    public cellphone,
+    public email,
+    public instrument,
+    public pricePerSession,-->
+      <td scop="row">
+          {{value.instrument}}
+      </td>
+      <td class="text-right" scop="row">
+          {{value.cellphone}}
+      </td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+<pagination-controls id="pagination2" (pageChange)="p = $event"></pagination-controls>

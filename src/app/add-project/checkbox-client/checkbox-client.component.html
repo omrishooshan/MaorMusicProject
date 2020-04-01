@@ -1,0 +1,26 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h5 _ngcontent-c9="" class="title" style="color:coral;">Please choose Client for session</h5>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+   
+<!--running through our clients--><div  *ngFor="let client of clients | paginate: {id: 'pagination3', itemsPerPage: 5, currentPage: p } ,let i=index">
+<label class="container"> 
+        
+        <h6 _ngcontent-c9="" style=" font-size: 1em; cursor: pointer;" (click)="c('Save click'); save($event,client.id);" > {{client.firstName}} {{client.lastName}} </h6>
+
+      </label>
+      </div>
+      <pagination-controls id="pagination3" (pageChange)="p = $event"></pagination-controls>
+<!--ends-->
+   </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="c('Save click'); save();">Save</button>
+  </div>
+</ng-template>
+
+<button  _ngcontent-c6="" class="btn btn-success" (click)="open(content)">Select a Client</button>

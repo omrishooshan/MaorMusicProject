@@ -1,0 +1,32 @@
+<p (click)="open(content)" >{{sessionName}}</p>
+
+<!---this template opens when pressing on session to see session info-->
+<ng-template #content let-c="close" let-d="dismiss">
+   <div class="modal-header">
+     <div class="col-md-4">
+     <h4 >{{sessionName}}</h4>
+     </div>
+     
+     <div class="col-md-4" style="margin-top: 5%;">
+        <label >DATE:</label>
+        <h6>11.2.2019</h6>
+        </div>
+        <div class="col-md-2" style="margin-top: 5%;">
+            <label >HOUR:</label>
+            <h6 >15:00</h6>
+            </div>
+     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+       <span aria-hidden="true">&times;</span>
+     </button>
+   </div>
+  
+   <div class="modal-body">
+     
+      <label >Description:  <span style="color: coral;font-size: 0.8em;">(click inside to add more details)</span></label>
+      <textarea style="width: 100%;height: 138px;border: none;"  placeholder="Add a more detailed description…" ></textarea>
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+   </div>
+ </ng-template>
+ <!--session template ends here-->

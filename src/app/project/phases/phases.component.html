@@ -1,0 +1,27 @@
+<ngb-accordion #acc="ngbAccordion"  >
+  <ngb-panel title="Phase {{phaseindex+1}} - {{phasename}}">
+    
+    <ng-template ngbPanelContent >
+   
+<!--looping through our tasks starts here-->
+<div *ngFor="let item of taskArry ; let i = index">
+<!--<span style="color:red;">task -{{i+1}}</span>-->
+<app-tasks [tasksname]="item" [taskIndex]="i" ></app-tasks>
+</div>
+<!--looping through our tasks ends here-->
+                  <!--option to add a new phase (opens a textarea with click event)-->
+                  <span (click)="show=true" class="spans_for_adding_data" > <i class="now-ui-icons ui-1_simple-add"></i>Add New Task </span>
+                  <div *ngIf="show">
+                  <hr>
+            <input for="TaskInputRef" type="textarea"  placeholder="enter here a new task..." style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 64px;" #TaskInputRef>
+            <div>
+            <button class="btn btn-success" (click)="show=false; addTask();">Save</button>
+            <span style="margin: 24px;">
+            </span>
+            <i class="now-ui-icons ui-1_simple-remove" (click)="show=false" style="cursor: pointer;"></i>
+            </div>
+                  </div>
+                  <!--option to add a new phase (opens a textarea with click event) closes here-->
+    </ng-template>
+  </ngb-panel>
+ 

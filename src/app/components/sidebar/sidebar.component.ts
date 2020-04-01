@@ -11,8 +11,8 @@ export const ROUTES: RouteInfo[] = [
     //{ path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
     //{ path: '/maps', title: 'Maps',  icon:'location_map-big', class: '' },
     { path: '/notifications', title: 'Add New Project',  icon:'media-2_note-03', class: '' },
-
-    { path: '/user-profile', title: 'Add New Artist',  icon:'users_single-02', class: '' },
+    { path: '/app-add-client', title: 'Add New Client',  icon:'users_single-02', class: '' },
+    { path: '/user-profile', title: 'Add New Musician',  icon:'users_single-02', class: '' },
     //{path:'/add-new-projects',title:'Add New Project',icon:'media-2_note-03',class:''},
  
     //{ path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },

@@ -1,0 +1,57 @@
+<table class="table">
+  <thead class=" text-primary">
+    <th scope="col">
+     Cliet's Name
+    </th>
+    <th scope="col">
+      Client's Last Name
+    </th>
+    <th scope="col">
+      Projects
+    </th>
+  </thead>
+  <tbody>
+  <!--looping through all of our projects-->
+     <tr *ngFor="let value of arrayOfClientsWithProject | paginate: {id :'pagination1', itemsPerPage: 5, currentPage: p },let i=index ">
+      <td scope="row">
+     {{value.firstName }}
+      </td>
+      <td  scope="row">
+       {{value.lastName}}
+      </td>
+
+      <!--checking-->
+      <ng-template #content let-c="close" let-d="dismiss">
+          <div class="modal-header">
+            <h5 _ngcontent-c9="" class="title" style="color:coral;">Choose your project</h5>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        
+          <div class="modal-body">
+             
+              <p *ngIf="value.projectsTbl.length==0">there is currently no projects for this client</p>
+        <!--running through our project names--><div  *ngFor="let v of value.projectsTbl | paginate: {id: 'pagination4', itemsPerPage: 5, currentPage: p2 } ,let i=index">
+        <label class="container"> 
+                
+            <td  scope="row">
+                <a id="project_link" (click)="c('Save click')"  [routerLink]="['/music-project',v.projectId,v.name]" style="cursor: pointer;">{{v.name}}</a>
+            </td>
+              </label>
+              </div>
+             <!--- <p *ngIf="v[]== 0">there is currently no projects for this client</p>-->
+              <pagination-controls id="pagination4" (pageChange)="p2 = $event"></pagination-controls>
+        <!--ends-->
+           </div>
+        </ng-template>
+        
+        <button  _ngcontent-c6="" class="btn btn-success" (click)="open(content)">Enter for projects</button>
+      <!--ends-->
+
+    </tr>
+  
+  </tbody>
+
+</table>
+<pagination-controls   id="pagination1" style=" background: #e82121;" (pageChange)="p = $event"></pagination-controls>

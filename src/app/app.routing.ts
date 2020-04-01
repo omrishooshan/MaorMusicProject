@@ -13,9 +13,9 @@ const routes: Routes =[
   
   {
     path: '',
-    redirectTo: 'user-profile',
+    redirectTo: 'table-list',
     pathMatch: 'full',
-  }, 
+  } ,
   {
     path: '',
     component: AdminLayoutComponent,
@@ -28,7 +28,7 @@ const routes: Routes =[
 },
   {
     path: '**',
-    redirectTo: 'user-profile'
+    redirectTo: 'table-list'
   },
 
 ];

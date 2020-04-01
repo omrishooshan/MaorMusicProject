@@ -1,0 +1,14 @@
+<form  class="form-inline">
+    <div class="form-group">
+      <div class="input-group">
+        <input class="form-control" placeholder="yyyy-mm-dd"
+               name="dp" [(ngModel)]="model"  ngbDatepicker #d="ngbDatepicker" >
+        <div class="input-group-append">
+          <button _ngcontent-c6="" class="btn btn-primary btn-block" style="bottom: 21%;" (click)="d.toggle()" type="button" >Set Date</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!--<pre>Model: {{ model | json }}</pre>-->
+  <!--class="btn btn-outline-secondary calendar"     class="form-inline" -->
